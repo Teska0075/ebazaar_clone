@@ -1,0 +1,161 @@
+.main {
+  width: 100%;
+  padding: 12px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  background-color: #ffffff;
+}
+
+.leftSec {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.searchMain {
+  width: 625px;
+  height: 42px;
+  margin-left: 20px;
+  padding: 1px;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.searchDrop select {
+  width: 153px;
+  height: 42px;
+  padding: 0px 12px;
+  appearance: none;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  border: none;
+  background: url("https://ebazaar.mn/static/media/ArroRightDown.5ccc071797ab80b43f30a32608ff6d26.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-color: #eceff1;
+  color: #37474f;
+  font-size: 16px;
+  font-family: "Nunito", sans-serif;
+}
+
+.searchInput {
+  width: 455px;
+  height: 42px;
+  margin-left: 5px;
+  border: none;
+}
+
+.searchIcon {
+  margin-right: 1%;
+}
+
+.rightSec {
+  width: 488px;
+  height: 44px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+
+.rightSec button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.rightSec span {
+  font-size: 12px;
+  font-family: "Nunito";
+  color: #78909c;
+}
+
+.rightSec img {
+  width: 24px;
+  height: 24px;
+}
+
+.cartText p,
+.shopText p {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 3px 0 -6px 0;
+}
+
+.notif {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info {
+  padding: 3px;
+  display: flex;
+  flex-direction: row;
+  border: 1px #cfd8dc solid;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.info img {
+  margin: 8px;
+}
+
+.info span {
+  font-size: 10px;
+  margin: 0;
+}
+
+.shop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-right: 1px #cfd8dc solid;
+}
+
+.shopText {
+  width: 110px;
+}
+
+.cart {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.cartText {
+  margin: 0 8px;
+}
+
+.counter {
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  width: 16px;
+  height: 16px;
+  background-color: #ffa400;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px !important;
+  color: #ffffff !important;
+}
