@@ -22,11 +22,11 @@ const Swiper = () => {
             alt=""
           />
         </div>
-        <div className={styles.buttons}>
+        {/* <div className={styles.buttons}>
           <a href="#slide1"></a>
           <a href="#slide2"></a>
           <a href="#slide3"></a>
-        </div>
+        </div> */}
       </div>
     </div>
   );
