@@ -13,44 +13,48 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .leftSec {
   display: flex;
   flex-direction: row;
-  align-items: center;
 }
-button {
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
+.leftSec button {
   display: flex;
   align-items: center;
-  gap: 5px;
+  font-size: 14px;
+  font-weight: 500;
   color: #546e7a;
+  margin-right: 20px;
+  padding: 0.2em 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: all .2s;  
 }
 
-.menu {
-  margin-right: 10px;
-  padding: 3px 0;
-  border-bottom: 2px rgba(255, 166, 0, 0) solid;
-  transition: 0.3s;
-}
 
-.menu:hover {
-  border-bottom: 2px #ffa400 solid;
-}
 
 .rightSec {
   display: flex;
-  flex-direction: row;
-  gap: 20px;
 }
 
-.gif {
+.rightSec button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: #546e7a;
+  font-size: 14px;
+  margin-right: 20px;
+  padding: 2.8px 0;
+}
+
+.gif{
+  margin-right: 0 !important;
+}
+.gif img{
   height: 38px;
 }

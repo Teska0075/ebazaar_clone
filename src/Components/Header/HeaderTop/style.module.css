@@ -8,7 +8,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.75rem;
 }
 .container {
   width: 1280px;
@@ -18,22 +17,29 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.container p{
+  font-size: 12px;
+  font-weight: 700;
+}
+
 .contact {
   /* margin-right: 10%; */
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 21.5px;
 }
 
 .info {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5.5px;
 }
 
 .info img {
   width: 18px;
   height: 18px;
+  margin-right: 5.5px;
 }

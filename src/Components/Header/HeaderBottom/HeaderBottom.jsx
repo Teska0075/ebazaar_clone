@@ -38,9 +38,8 @@ const HeaderBottom = () => {
               alt="badge"
             />
           </button>
-          <button>
+          <button className={styles.gif}>
             <img
-              className={styles.gif}
               src="https://ebazaar.mn/static/media/shuurhai%20tugeelt%20button.77bd3c1698d50ce91644.gif"
               alt="gif"
             />

@@ -4,7 +4,7 @@ import axios from "axios";
 
 const SpecialProducts = () => {
   const [products, setProducts] = useState([]);
-  console.log("TOKEN CHECK ", process.env.REACT_APP_PRODUCT_TOKEN);
+  // console.log("TOKEN CHECK ", process.env.REACT_APP_PRODUCT_TOKEN);
   const getProducts = () => {
     axios
       .get("https://api2.ebazaar.mn/api/products/get1", {
@@ -13,13 +13,14 @@ const SpecialProducts = () => {
         },
       })
       .then((res) => {
-        console.log("RESULT", res.data.data);
-        setProducts(res.data.data);
+        // console.log("RESULT", res.data.data);
+        setProducts(res.data.data.slice(19));
       })
       .catch((err) => {
         console.log("ERROR ", err);
       });
   };
+  // console.log("PRICE: ",products[0].locations["62f4aabe45a4e22552a3969f"].price.channel["1"])
   useEffect(() => {
     getProducts();
   }, [0]);
@@ -55,7 +56,7 @@ const SpecialProducts = () => {
             <div className={styles.cardText}>
               <p>{e.name}</p>
               <div className={styles.cardPrice}>
-                <span>₮</span>
+                <span>{e.locations["62f4aabe45a4e22552a3969f"].price.channel["1"]}₮</span>
                 <button>+</button>
               </div>
             </div>

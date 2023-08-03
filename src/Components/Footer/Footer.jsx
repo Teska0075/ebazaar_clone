@@ -10,16 +10,16 @@ const Footer = () => {
             <p>Ebazaar.mn</p>
             <ul>
               <li>
-                <a href="#">Эрхэм зорилго</a>
+                Эрхэм зорилго
               </li>
               <li>
-                <a href="#">Бидний тухай</a>
+                Бидний тухай
               </li>
               <li>
-                <a href="#">Веб үйлчилгээ</a>
+                Веб үйлчилгээ
               </li>
               <li>
-                <a href="#">In App үйлчилгээ</a>
+                In App үйлчилгээ
               </li>
             </ul>
           </div>
@@ -27,13 +27,13 @@ const Footer = () => {
             <p>Хамтын ажиллагаа</p>
             <ul>
               <li>
-                <a href="#">Бүтээгдэхүүн нийлүүлэх</a>
+                Бүтээгдэхүүн нийлүүлэх
               </li>
               <li>
-                <a href="#">Бүтээгдэхүүн захиалах</a>
+                Бүтээгдэхүүн захиалах
               </li>
               <li>
-                <a href="#">Түншүүд</a>
+                Түншүүд
               </li>
             </ul>
           </div>
@@ -41,55 +41,55 @@ const Footer = () => {
             <p>Тусламж</p>
             <ul>
               <li>
-                <a href="#">Хэрэглэх заавар</a>
+                Хэрэглэх заавар
               </li>
               <li>
-                <a href="#">Түгээмэл асуултууд</a>
+                Түгээмэл асуултууд
               </li>
               <li>
-                <a href="#">Үйлчилгээний нөхцөл</a>
+                Үйлчилгээний нөхцөл
               </li>
               <li>
-                <a href="#">Санал хүсэлт</a>
+                Санал хүсэлт
               </li>
               <li>
-                <a href="#">Нууцлалын баталгаа</a>
+                Нууцлалын баталгаа
               </li>
             </ul>
           </div>
-          <div className={styles.menu}>
-            <div className={styles}>
+          <div className={styles.menuContact}>
+            <div className={styles.contactInfo}>
               <p>Холбоо барих</p>
-              <div>
-                <div>
+              <ul className={styles.contact}>
+                <li>
                   <img
                     src="https://ebazaar.mn/static/media/Call_location.b25c12d89418700e22a30db30e7dc319.svg"
                     alt="phone"
                   />
-                  <a href="#">+976 7707-1907</a>
-                </div>
-                <div>
+                  +976 7707-1907
+                </li>
+                <li>
                   <img
                     src="https://ebazaar.mn/static/media/Location.93978af14afe1c46bfb3e0276a9803e5.svg"
                     alt="location"
                   />
-                  <a href="#">info@ebazaar.mn</a>
-                </div>
-              </div>
-              <p>Хаяг</p>
-              <div>
+                  info@ebazaar.mn
+                </li>
+              </ul>
+              <p className={styles.hayg}>Хаяг</p>
+              <div className={styles.address}>
                 <img
                   src="https://ebazaar.mn/static/media/Location.93978af14afe1c46bfb3e0276a9803e5.svg"
                   alt="location"
                 />
-                <a href="#">
+                <span>
                   Улаанбаатар хот, Баянзүрх дүүрэг, 26-р хороо, Олимп хороолол
                   13312, Их Монгол Улсын гудамж 202, Сакура Тауэр, 10 давхар,
                   1006 тоот
-                </a>
+                </span>
               </div>
-              <p>холбоосууд</p>
-              <div>
+              <p className={styles.holboos}>Холбоосууд</p>
+              <div className={styles.socialIcons}>
                 <img
                   src="https://ebazaar.mn/static/media/facebook.d9060802669d95d0195b54f4b2ecac29.svg"
                   alt="facebook"
@@ -107,7 +107,7 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles.footerRight}>
-          <p>Апп татах холбоос</p>
+          <p>Апп татах холбоос:</p>
           <a href="/">QR кодоо уншуулаад аппаа татаарай</a>
           <img
             src="https://ebazaar.mn/static/media/App%20QR.2cd02942bab8a4ce71cf.png"
@@ -125,7 +125,12 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className={styles.bottom}></div>
+      <div className={styles.bottom}>
+        <div className={styles.bottomText}>
+
+        <p>Е-БАЗААР Трейд ХХК ©2022 бүх эрх хуулиар хамгаалагдсан</p>
+        </div>
+      </div>
     </div>
   );
 };

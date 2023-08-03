@@ -11,10 +11,16 @@
   margin: 40px 0 20px;
 }
 
+.top h1{
+  font-size: 36px;
+  font-weight: 600;
+}
+
 .top button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 10px;
 }
 
 .background {
@@ -41,29 +47,34 @@
 .bottom {
   width: 100%;
   display: grid;
-  gap: 20px;
-  grid-template-columns: auto auto auto auto;
+  grid-gap: 20px;
+  grid-template-columns: auto auto auto auto auto;
   box-sizing: border-box;
 }
 
 .card {
-  background-color: #ffffff;
-  max-width: 222px;
-  max-height: 344px;
+  width: 222px;
+  height: 344px;
   padding: 26px 14px 12px;
   position: relative;
+  background: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px #eceff1 solid;
+  border: 1.5px solid #eceff1;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 8px 20px rgba(0,0,0,.04);
+  color: #546e7a;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  transition: all .2s;
   box-sizing: border-box;
 }
 
 .favourite {
-  /* background-color: brown; */
-  width: 32px;
+  
   height: 32px;
   position: absolute;
   object-fit: contain;
@@ -78,12 +89,11 @@
 }
 
 .cardImg {
-  /* background-color: beige; */
-  margin-bottom: 22px;
   width: 174px;
   height: 174px;
+  margin-bottom: 22px;
   position: relative;
-  object-fit: contain;
+  object-fit:contain ;
 }
 .cardImg img {
   width: 100%;
@@ -100,9 +110,12 @@
   width: 100%;
   height: 36px;
   margin: 6px 0 0 0;
+  display: flex;
+  justify-content: flex-start;
   color: #546e7a;
   font-size: 14px;
   font-weight: 400;
+  text-align: start;
 }
 
 .cardPrice {

@@ -26,7 +26,6 @@ const HeaderMiddle = () => {
             </div>
 
             <input
-              className={styles.searchInput}
               type="search"
               placeholder="Хайх утгаа энд оруулна уу"
             />
@@ -55,6 +54,7 @@ const HeaderMiddle = () => {
           <div className={styles.info}>
             <div className={styles.shop}>
               <img
+                className={styles.shopIcon}
                 src="https://ebazaar.mn/static/media/store.751c2847f979375d8dacd2830789badc.svg"
                 alt="shop"
               />
@@ -68,14 +68,15 @@ const HeaderMiddle = () => {
               />
             </div>
             <div className={styles.cart}>
-              <img
-                src="https://ebazaar.mn/static/media/Buy.ee4126bd0e7c96957eca833404837342.svg"
-                alt=""
-              ></img>
-              <span className={styles.counter}>0</span>
+              <div className={styles.basket}>
+                <img
+                  src="https://ebazaar.mn/static/media/Buy.ee4126bd0e7c96957eca833404837342.svg"
+                  alt=""
+                ></img>
+                <span>0</span>
+              </div>
               <div className={styles.cartText}>
                 <p>0₮ </p>
-                {/* <span className={styles.counter}>0</span> */}
                 <span>Таны сагсанд</span>
               </div>
             </div>

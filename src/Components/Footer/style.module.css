@@ -1,39 +1,148 @@
 .main {
-  width: 100%;
+  width: 100vw;
   height: 451px;
-  background-color: aquamarine;
+  background-color: #ffffff ;
   bottom: 0;
 }
 
-.main ul {
-  list-style: none;
-  padding: 0;
-}
 
-.main p {
-  font-size: 14px;
-  color: #37474f;
-  font-weight: 700;
-  margin: 0 0 7px;
-}
-
-.main a {
-  font-size: 12px;
-  color: #546e7a;
-  margin: 0 0 2px;
-  text-decoration: none;
-}
-
+/* Top */
 .top {
-  background-color: bisque;
   width: 1280px;
   margin: 0 auto;
-  padding: 60px 0 0;
+  padding: 60px 0 103.5px;
   display: flex;
   justify-content: space-between;
 }
 
+.top p{
+  font-size: 14px;
+  color: #37474f;
+  font-weight:700;
+  margin: 0 0 7px;
+}
+
+/* Left */
+
 .footerLeft {
   width: 710px;
+  height: 255px;
+  display: flex;
+  flex-direction: row;
+}
+
+.menu{
+   margin-right: 64px;
+}
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu li {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5715;
+  color: #546e7a;
+  margin: 0 0 2px;
+  padding: 0;
+  text-decoration: none;
+}
+.menu a{
+  margin-bottom: 2px;
+}
+
+/* .menuContact span{
+  font-size: 12px;
+  color: #546e7a;
+} */
+.contactInfo{
+  width: 160px;
+  margin-right: -64px;
+  font-size: 12px;
+  color: #546e7a;
+}
+.contactInfo img{
+  margin-right: 5.45px;
+}
+.contact{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.contact li{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 400;
+}
+
+
+.hayg{
+  margin: 18px 0 7px !important;
+}
+.address{
+  display: flex;
+  align-items: start;
+  line-height: 12px;
+}
+.address img{
+  margin-top: 2px !important;
+}
+
+.holboos{
+  margin: 16px 0 7px !important;
+}
+.socialIcons{
+  display: block;
+}
+.socialIcons img{
+  margin-right: 13px;
+}
+
+/* Right */
+.footerRight{
+  width: 154px;
+  box-sizing: border-box;
+}
+.footerRight img{
+  width: 150px;
+  height:150px ;
+}
+.footerRight a{
+  font-size: 12px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #546e7a;
+}
+.icons{
   display: flex;
 }
+.icons img{
+  width: 77px !important;
+  height: 100%;
+}
+
+/* Bottom */
+
+.bottom{
+  width: 100%;
+  height: 33px;
+  background-color: #90a4ae;
+}
+.bottomText{
+  width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+}
+.bottomText p{
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+  /* margin-bottom: 12px; */
+  padding: 0;
+}
+
