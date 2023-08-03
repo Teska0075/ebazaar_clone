@@ -1,59 +1,29 @@
-import React from "react";
-import styles from "./style.module.css"
+import React, { useEffect, useState } from "react";
+import styles from "./style.module.css";
+import axios from "axios";
 
 const Supplier = () => {
-
-  const dummyData = [
-    {
-      imgUrl:"https://ebazaar.mn/media/product/6451839791366876118714579441202301180039211652005125652064228302797616.jpg",
-      title:"Е Базаар Трейд ХХК"
-    },
-    {
-      imgUrl:"https://media.ebazaar.link/logo/supplier/mcs-coca-cola.jpg",
-      title:"М-Си-Эс Кока-Кола"
-    },
-    {
-      imgUrl:"https://ebazaar.mn/logo/supplier/anungoo.jpg",
-      title:"Анунгоо ХХК"
-    },
-    {
-      imgUrl:"https://ebazaar.mn/media/original/1848454126941192973174226235202301120737221918813832548391243091882641.PNG",
-      title:"Сүү ХК"
-    },
-    {
-      imgUrl:"https://ebazaar.mn/media/product/6451839791366876118714579441202301180039211652005125652064228302797616.jpg",
-      title:"Е Базаар Трейд ХХК"
-    },
-    {
-      imgUrl:"https://media.ebazaar.link/logo/supplier/mcs-coca-cola.jpg",
-      title:"М-Си-Эс Кока-Кола"
-    },
-    {
-      imgUrl:"https://ebazaar.mn/logo/supplier/anungoo.jpg",
-      title:"Анунгоо ХХК"
-    },
-    {
-      imgUrl:"https://ebazaar.mn/media/original/1848454126941192973174226235202301120737221918813832548391243091882641.PNG",
-      title:"Сүү ХК"
-    },
-    {
-      imgUrl:"https://ebazaar.mn/media/product/6451839791366876118714579441202301180039211652005125652064228302797616.jpg",
-      title:"Е Базаар Трейд ХХК"
-    },
-    {
-      imgUrl:"https://media.ebazaar.link/logo/supplier/mcs-coca-cola.jpg",
-      title:"М-Си-Эс Кока-Кола"
-    },
-    {
-      imgUrl:"https://ebazaar.mn/logo/supplier/anungoo.jpg",
-      title:"Анунгоо ХХК"
-    },
-    {
-      imgUrl:"https://ebazaar.mn/media/original/1848454126941192973174226235202301120737221918813832548391243091882641.PNG",
-      title:"Сүү ХК"
-    },
-  ]
-
+  const [supplier, setSupplier] = useState([]);
+  console.log("TOKEN SUPPLY ", process.env.REACT_APP_SUPPLIER_TOKEN);
+  const getSupplier = async () => {
+    axios
+      .get("https://api.ebazaar.mn/api/suppliers/get", {
+        headers: {
+          ebazaar_token: process.env.REACT_APP_SUPPLIER_TOKEN,
+        },
+      })
+      .then((res) => {
+        console.log("123", res);
+        // setSupplier(res.data.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+  // console.log("array", supplier);
+  useEffect(() => {
+    getSupplier();
+  }, [0]);
   return (
     <div className={styles.main}>
       <div className={styles.top}>
@@ -72,15 +42,17 @@ const Supplier = () => {
         </button>
       </div>
       <div className={styles.bottom}>
-        {
-          dummyData.map((e)=>(
-            <div className={styles.card}>
-              <img src={e.imgUrl} alt=""/>
-              <span>{e.title}</span>
-              <img className={styles.icon} src="https://ebazaar.mn/static/media/HeartGrey.b39f36768bee38b5c55273121c102c25.svg" alt="" />
-            </div>
-          ))
-        }
+        {supplier.map((e, idx) => (
+          <div key={idx} className={styles.card}>
+            <img src={e.media} alt="" />
+            <span>{e.name}</span>
+            <img
+              className={styles.icon}
+              src="https://ebazaar.mn/static/media/HeartGrey.b39f36768bee38b5c55273121c102c25.svg"
+              alt=""
+            />
+          </div>
+        ))}
       </div>
     </div>
   );

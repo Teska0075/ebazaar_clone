@@ -1,44 +1,18 @@
-.main {
+.swiper {
   width: 100vw;
   left: calc(-50vw + 50%);
   position: relative;
   overflow: hidden;
 }
 
-.wrapper {
+.swiperSlide {
   position: relative;
-  left: 0;
-  max-width: 300%;
   object-fit: contain;
-  animation: slide 40s infinite ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes slide{
-  0% {transform: translateX(0);}
-  100% {transform: translateX(calc(-100%*3));}
-}
-
-.slider {
-  display: flex; 
-}
-
-.slider img {
+.swiperSlide img {
   width: 100%;
-  float: left;
-  object-fit: contain;
-  /* position: relative; */
-}
-
-.buttons a {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background-color: #999;
-  margin: 0 5px;
-  border-radius: 50%;
-  text-decoration: none;
-}
-
-.buttons a.active {
-  background-color: #0b6192;
 }

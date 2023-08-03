@@ -1,0 +1,134 @@
+.main {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 20px;
+}
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px 0 20px;
+}
+
+.top button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.background {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.8px solid #cfd8dc;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.background svg {
+  font-size: 14px;
+}
+
+.background:hover,
+.background svg:hover {
+  background-color: #ffa400;
+  fill: #ffffff;
+}
+
+.bottom {
+  width: 100%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: auto auto auto auto;
+  box-sizing: border-box;
+}
+
+.card {
+  background-color: #ffffff;
+  max-width: 222px;
+  max-height: 344px;
+  padding: 26px 14px 12px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px #eceff1 solid;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+}
+
+.favourite {
+  /* background-color: brown; */
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  object-fit: contain;
+  top: 12px;
+  right: 12px;
+  z-index: 100;
+}
+
+.favourite img {
+  width: 100%;
+  height: 100%;
+}
+
+.cardImg {
+  /* background-color: beige; */
+  margin-bottom: 22px;
+  width: 174px;
+  height: 174px;
+  position: relative;
+  object-fit: contain;
+}
+.cardImg img {
+  width: 100%;
+  height: 100%;
+}
+
+.cardText {
+  /* background-color: burlywood; */
+  width: 100%;
+}
+
+.cardText p {
+  /* background-color: brown; */
+  width: 100%;
+  height: 36px;
+  margin: 6px 0 0 0;
+  color: #546e7a;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.cardPrice {
+  width: 100%;
+  padding-top: 18px;
+  /* background-color: chocolate; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardPrice span {
+  font-size: 20px;
+  font-weight: 700;
+  color: #37474f;
+}
+
+.cardPrice button {
+  width: 48px;
+  height: 48px;
+  background-color: #ffa400;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+}

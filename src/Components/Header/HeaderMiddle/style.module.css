@@ -1,12 +1,23 @@
 .main {
   width: 100%;
+  position: relative;
+  /* left: calc(-50vw+5%); */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+
+.container {
+  width: 1280px;
+  margin: 0 auto;
   padding: 12px 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
-  background-color: #ffffff;
+  /* background-color: #ffa400; */
 }
 
 .leftSec {
@@ -62,6 +73,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: end;
   gap: 30px;
 }
 

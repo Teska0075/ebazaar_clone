@@ -1,6 +1,15 @@
 .main {
-  margin: 5px 0;
+  width: 100%;
+  padding: 5px 0;
   position: sticky;
+  display: flex;
+  align-items: center;
+  background-color: #fbfbfc;
+}
+
+.container {
+  width: 1280px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
