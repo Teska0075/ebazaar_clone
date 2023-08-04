@@ -1,49 +1,9 @@
 import React from "react";
 import styles from "./style.module.css";
+import useData from "../../hooks/useData";
 
 const Category = () => {
-  const dummyData = [
-    {
-      iconUrl: "https://media.ebazaar.link/img/category/undaa.svg",
-      name: "Ус, ундаа",
-    },
-    {
-      iconUrl: "https://media.ebazaar.link/img/category/budaa.svg",
-      name: "Гурил, будаа, гоймон",
-    },
-    {
-      iconUrl: "https://media.ebazaar.link/img/category/ger_ahui.svg",
-      name: "Гэр ахуй",
-    },
-    {
-      iconUrl: "https://media.ebazaar.link/img/category/alhocol.svg",
-      name: "Алкоголь",
-    },
-    {
-      iconUrl: "https://media.ebazaar.link/img/category/suu.svg",
-      name: "Сүү, сүүн бүтээгдэхүүн",
-    },
-    {
-      iconUrl: "https://media.ebazaar.link/img/category/belen_hool.svg",
-      name: "Бэлэн хоол, түргэн хоол",
-    },
-    {
-      iconUrl: "https://media.ebazaar.link/img/category/amttan.svg",
-      name: "Амттан",
-    },
-    {
-      iconUrl: "https://media.ebazaar.link/img/category/darshilsan.svg",
-      name: "Даршилсан, нөөшилсөн",
-    },
-    {
-      iconUrl: "https://media.ebazaar.link/img/category/amtlagch.svg",
-      name: "Хоол амтлагч, соус",
-    },
-    {
-      iconUrl: "https://media.ebazaar.link/img/category/goo_saikhan.svg",
-      name: "Гоо сайхан",
-    },
-  ];
+  const { categoriesData } = useData();
   return (
     <div className={styles.main}>
       <div className={styles.top}>
@@ -62,9 +22,9 @@ const Category = () => {
         </button>
       </div>
       <div className={styles.bottom}>
-        {dummyData.map((e, idx) => (
+        {categoriesData.map((e, idx) => (
           <div key={idx} className={styles.card}>
-            <img src={e.iconUrl} alt="icon" />
+            <img src={e.logo[0]} alt="icon" />
             <span>{e.name}</span>
           </div>
         ))}

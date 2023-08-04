@@ -1,29 +1,32 @@
 import React, { useEffect, useState } from "react";
 import styles from "./style.module.css";
 import axios from "axios";
+import useData from "../../hooks/useData";
 
 const Supplier = () => {
-  const [supplier, setSupplier] = useState([]);
-  console.log("TOKEN SUPPLY ", process.env.REACT_APP_SUPPLIER_TOKEN);
-  const getSupplier = async () => {
-    axios
-      .get("https://api.ebazaar.mn/api/suppliers/get", {
-        headers: {
-          ebazaar_token: process.env.REACT_APP_SUPPLIER_TOKEN,
-        },
-      })
-      .then((res) => {
-        console.log("123", res);
-        // setSupplier(res.data.data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  };
-  // console.log("array", supplier);
-  useEffect(() => {
-    getSupplier();
-  }, [0]);
+  const { suppliersData } = useData();
+  // console.log("CHECK: ", suppliersData);
+  // const [supplier, setSupplier] = useState([]);
+  // console.log("TOKEN SUPPLY ", process.env.REACT_APP_SUPPLIER_TOKEN);
+  // const getSupplier = async () => {
+  //   axios
+  //     .get("https://api.ebazaar.mn/api/suppliers/get", {
+  //       headers: {
+  //         ebazaar_token: process.env.REACT_APP_SUPPLIER_TOKEN,
+  //       },
+  //     })
+  //     .then((res) => {
+  //       // console.log("123", res);
+  //       // setSupplier(res.data.data);
+  //     })
+  //     .catch((error) => {
+  //       console.error(error);
+  //     });
+  // };
+  // // console.log("array", supplier);
+  // useEffect(() => {
+  //   getSupplier();
+  // }, [0]);
   return (
     <div className={styles.main}>
       <div className={styles.top}>
@@ -42,9 +45,9 @@ const Supplier = () => {
         </button>
       </div>
       <div className={styles.bottom}>
-        {supplier.map((e, idx) => (
+        {suppliersData.map((e, idx) => (
           <div key={idx} className={styles.card}>
-            <img src={e.media} alt="" />
+            <img src={e.icon} alt="" />
             <span>{e.name}</span>
             <img
               className={styles.icon}
