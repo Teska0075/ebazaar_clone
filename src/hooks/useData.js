@@ -43,19 +43,16 @@ const useData = () => {
 
   const getProductsData = async () => {
     try {
+      const productId =
+        "[233167,233170,546775,449822,449810,449811,449817,564808,564810,449820,564809,564806,564807,449806,449807,449808,449815,449813]";
       const result = await axios.get(
-        "https://api2.ebazaar.mn/api/products/get1",
-
-        {
-          params: {
-            ids: [233167],
-          },
-        },
+        `https://api2.ebazaar.mn/api/products/get1?ids=${productId}`,
         {
           headers: { ebazaar_token: process.env.REACT_APP_PRODUCT_TOKEN },
         }
       );
-      console.log("SUPPLY CHECK: ", result);
+      //   console.log("PRODUCT CHECK: ", result.data.data);
+      setProductsData(result.data.data);
     } catch (error) {
       console.log("ERROR: ", error);
     }
@@ -65,7 +62,7 @@ const useData = () => {
     getPageData();
     getCategoriesData();
     getProductsData();
-  }, [0]);
+  }, []);
 
   return { bannerData, categoriesData, suppliersData, productsData };
 };

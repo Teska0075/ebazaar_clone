@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styles from "./style.module.css";
 import axios from "axios";
+import useData from "../../hooks/useData";
 
 const SpecialProducts = () => {
-  const [products, setProducts] = useState([]);
+  const { productsData } = useData();
   // console.log("SUPPLY CHECK: ", )
   // // console.log("TOKEN CHECK ", process.env.REACT_APP_PRODUCT_TOKEN);
   // const getProducts = () => {
@@ -43,7 +44,7 @@ const SpecialProducts = () => {
         </button>
       </div>
       <div className={styles.bottom}>
-        {products.map((e, idx) => (
+        {productsData.map((e, idx) => (
           <div key={idx} className={styles.card}>
             <button className={styles.favourite}>
               <img

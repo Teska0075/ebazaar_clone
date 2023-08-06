@@ -1,0 +1,137 @@
+.main {
+  width: 100vw;
+  height: 100vw;
+  box-sizing: border-box;
+  font-family: "Nunito";
+}
+
+.container {
+  background: url(https://media.ebazaar.link/img/banner/app-banner1.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 571px;
+  top: 0;
+}
+
+.content {
+  background-color: #ffffff;
+  width: 571px;
+  height: 100%;
+  padding: 100px 100px 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 0;
+  box-sizing: border-box;
+}
+
+.items {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.items span {
+  margin-top: 120px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #37474f;
+}
+
+.input {
+  margin-top: 40px;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+.input input {
+  width: 100%;
+  height: 52px;
+  padding: 14px 20px;
+  outline: none;
+  border: 1px solid #cfd8dc;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+}
+
+.input img {
+  position: absolute;
+  right: 22px;
+  bottom: 15px;
+  z-index: 10;
+}
+
+.password {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  box-sizing: border-box;
+}
+.password span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #37474f;
+  margin: 0 8px 54px;
+}
+
+.error1 {
+  width: 100%;
+  height: 16px;
+  padding-left: 12px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #da1414;
+}
+.error {
+  width: 100%;
+  height: 16px;
+  margin-bottom: 50px;
+  padding-left: 12px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #da1414;
+}
+
+.items button {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #ffe5b3;
+  border-radius: 24px;
+}
+
+.signUp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.signUp span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #78909c;
+  margin-right: 8px;
+}
+.signUp a {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #546e7a;
+  text-decoration: underline;
+}

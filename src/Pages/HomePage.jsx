@@ -5,16 +5,17 @@ import Category from "../Components/Category/Category";
 import Supplier from "../Components/Supplier/Supplier";
 import Marathon from "../Components/Marathon/Marathon";
 import SpecialProducts from "../Components/SpecialProducts/SpecialProducts";
+import Layout from "../Layout";
 
 const HomePage = () => {
   return (
-    <div>
+    <Layout>
       <Swiper />
       <Category />
       <Supplier />
       <Marathon />
       <SpecialProducts />
-    </div>
+    </Layout>
   );
 };
 

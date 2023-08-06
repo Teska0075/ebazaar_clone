@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./style.module.css";
+import { UserContext } from "../../../context";
 
 const HeaderMiddle = () => {
+  const { logout } = useContext(UserContext);
+
   return (
     <div className={styles.main}>
       <div className={styles.container}>
@@ -25,10 +28,7 @@ const HeaderMiddle = () => {
               </select>
             </div>
 
-            <input
-              type="search"
-              placeholder="Хайх утгаа энд оруулна уу"
-            />
+            <input type="search" placeholder="Хайх утгаа энд оруулна уу" />
 
             <img
               className={styles.searchIcon}
@@ -44,7 +44,12 @@ const HeaderMiddle = () => {
             />
             <span>Мэдэгдэл</span>
           </button>
-          <button className={styles.profile}>
+          <button
+            className={styles.profile}
+            onClick={() => {
+              logout();
+            }}
+          >
             <img
               src="https://ebazaar.mn/static/media/profile3.5f2dce0ddf2c7a1cd0c22bd44ddd35d4.svg"
               alt="profile"

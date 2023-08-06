@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState, useContext } from "react";
+import SignIn from "./SignIn/SignIn";
+import SignUp from "./SignUp/SignUp";
 
-const auth = () => {
-  return <div>auth</div>;
+const Auth = () => {
+  const [isSignIn, setIsSignIn] = useState(true);
+  return <>{isSignIn ? <SignIn /> : <SignUp />}</>;
 };
 
-export default auth;
+export default Auth;
